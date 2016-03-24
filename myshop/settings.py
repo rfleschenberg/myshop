@@ -31,12 +31,42 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
     'django.contrib.auth',
+    'email_auth',
+    'shop',
+    'rest_framework',
+    'djangocms_admin_style',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'cms',
+    'treebeard',
+    'menus',
+    'sekizai',
+    'cmsplugin_cascade',
+    'post_office',
+    'filer',
+    'mptt',
+    'easy_thumbnails',
+    'djng',
+    'sass_processor',
+    'myshop',
+)
+
+SHOP_APP_LABEL = 'myshop'
+SITE_ID = 1
+LANGUAGES = (
+    ('en-us', 'US English'),
+)
+
+AUTH_USER_MODEL = 'email_auth.User'
+
+SILENCED_SYSTEM_CHECKS = (
+    'auth.E003',
+    'auth.W004',
 )
 
 MIDDLEWARE_CLASSES = (
